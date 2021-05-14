@@ -1,0 +1,42 @@
+Top Class ->  JFrame extension , has main
+main creates new top class and setting to visible
+new top class constructor builds a new frame and packs it to TopClass. can't resize the gamescreen, sets title, sets size, and makes sure you can close out of it.
+
+
+PlayGameScreen --> setting panel width, height. set focusable = true. creating a buffer. create dog and set width and height, x, y.
+Setting up the initial logs with width height x y. Setting up timer with delay and starting the timer ----
+
+----> starting the timer calls actionPerformed function, which resets the locations for all logs and calls paint function. The timer will repeatedly call
+the actionPerformed function with a given interval.Function call only stops when you call stop timer.
+
+The paint function calls the graphics object to draw the dog and the log. 
+
+
+How InitLogs works:
+
+1. Create 2D integer array to store x y location.
+2. Create 1D integer array to store height.
+3. Create arrayList of Log. ArrayList supports add, remove and get functions.
+4. For each element in the integer x y 2d array loop
+      get x y value
+      randomly pick one height from height array
+      create new log with above x y and height 
+      width is fixed to 150
+      add the above created log to LogArrayList
+   
+   End Loop
+   
+updateListLogsRighttoLeft:
+
+1. For each log in ArrayList
+      get Log
+      if log x position is above zero
+         log x position = current position - 10
+      else
+         remove log
+         call init log to add new logs
+   End Loop
+   
+
+
+
