@@ -30,6 +30,7 @@ public class PlayGameScreen extends JPanel implements ActionListener {
     private final Dog dog;
  
     private boolean variableLoop = true;
+    private boolean displayGameOver = false;
     private int score = 0;
     private final Timer timer;
     private final int DELAY = 200;
@@ -117,21 +118,30 @@ public class PlayGameScreen extends JPanel implements ActionListener {
         super.paintComponent(g);
 
 
-        // sky
-        g.setColor(Color.WHITE);
-        g.fillRect(0, 0, sw, sh);
-        g.setColor(Color.BLACK);
-        g.fillRect(0, 601, sw, sh);
-        g.drawImage(dog.getDog(), dog.getX(), dog.getY(), this);
+            // sky
+            g.setColor(Color.WHITE);
+            g.fillRect(0, 0, sw, sh);
+            g.setColor(Color.BLACK);
+            g.fillRect(0, 601, sw, sh);
+            g.drawImage(dog.getDog(), dog.getX(), dog.getY(), this);
 
-        for (Obstacle l : obstacles) {
-            g.drawImage(l.getLog(), l.getX(), l.getY(), this);
+            for (Obstacle l : obstacles) {
+                g.drawImage(l.getLog(), l.getX(), l.getY(), this);
+            }
+
+            g.setColor(Color.WHITE);
+            g.setFont(new Font("Calibri", Font.BOLD, 30));
+            g.drawString("Score: " + score / 2, 15, 625);
+
+        if ( displayGameOver) {
+            System.out.println("Game Over");
+            g.setColor(Color.red);
+            g.fillRect(275, 200, sw/4, sh/8);
+            g.setColor(Color.white);
+            g.setFont(new Font("Calibri", Font.BOLD, 30));
+            g.drawString("Game Over ", 290, 255);
+
         }
-
-        g.setColor(Color.WHITE);
-        g.setFont(new Font("Calibri", Font.BOLD, 30));
-        g.drawString("Score: " + score/2, 15, 625);
-
         Toolkit.getDefaultToolkit().sync();
         g.dispose();
 
@@ -218,6 +228,7 @@ public class PlayGameScreen extends JPanel implements ActionListener {
     private void moveDog() {
         if (dog.getY() > 600 - 1 - (dog.getHeight() + 8)) {
             variableLoop = false;
+            displayGameOver = true;
 
         } else {
             dog.setY(dog.getY() + 25);
@@ -282,6 +293,7 @@ public class PlayGameScreen extends JPanel implements ActionListener {
             if (dr.intersects(lr)) {
 
                 variableLoop = false;
+                displayGameOver = true;
             }
         }
     }
