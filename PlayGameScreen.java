@@ -132,7 +132,7 @@ public class PlayGameScreen extends JPanel implements ActionListener {
             g.setColor(Color.WHITE);
             g.setFont(new Font("Calibri", Font.BOLD, 30));
             g.drawString("Score: " + score / 2, 15, 625);
-
+        /* on end of game display red rectangle with white letter saying Game Over */
         if ( displayGameOver) {
             System.out.println("Game Over");
             g.setColor(Color.red);
@@ -140,6 +140,7 @@ public class PlayGameScreen extends JPanel implements ActionListener {
             g.setColor(Color.white);
             g.setFont(new Font("Calibri", Font.BOLD, 30));
             g.drawString("Game Over ", 290, 255);
+            timer.stop();
 
         }
         Toolkit.getDefaultToolkit().sync();
