@@ -1,3 +1,5 @@
+// Names: Tanvi Pedireddi & Megana Kumar
+
 import javax.swing.*;
 import java.awt.Font;
 import java.awt.Graphics;
