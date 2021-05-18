@@ -1,3 +1,5 @@
+// Names: Tanvi Pedireddi & Megana Kumar
+
 import java.awt.EventQueue;
 import javax.swing.JFrame;
 
