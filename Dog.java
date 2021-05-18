@@ -1,5 +1,4 @@
 // Names: Tanvi Pedireddi & Megana Kumar
-
 import java.awt.Graphics;
 import java.awt.Rectangle;
 import java.awt.Image;
@@ -119,8 +118,6 @@ public class Dog {
 
 	public Rectangle getRectangle() {
 
-		// needs to return a Rectangle or it will not compile
-
 		return (new Rectangle(xloc, yloc, coco.getWidth(null), coco.getHeight(null)));
 
 	}
@@ -129,8 +126,6 @@ public class Dog {
 	 * returns the buffered image which represents the dog's image object
 	 */
 	public BufferedImage getBuffImg() {
-
-		// needs to return a BufferedImage or it will not compile
 
 		BufferedImage BI = new BufferedImage(coco.getWidth(null), coco.getHeight(null), BufferedImage.TYPE_INT_ARGB);
 		Graphics grphics = BI.getGraphics();
