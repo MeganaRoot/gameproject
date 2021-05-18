@@ -1,0 +1,21 @@
+How to run the Coco's Adventure:
+
+1. Click the run button.
+
+2. When the game screen comes up, you will see a dog on the left of the screen. Click the space bar to keep the dog
+elevated. If you stop pressing the space bar, the dog will move downwards until it hits the ground, and the game will 
+be over.
+
+3. Using the space bar, avoid hitting the brown log rectangles at the bottom of the screen and the blue rain 
+rectangles at the top of the screen.
+
+Important Notes:
+
+ - The score at the bottom of the screen, located against the black rectangle, will keep track of how many logs you 
+   pass. Try to get a large score!
+
+ - If at any time, you allow the dog to touch the ground (the black rectangle) or touch the rain 
+   or log rectangles, a large message will pop up on the screen saying "game over." You cannot resume your progress
+   when the message pops up.
+
+Good luck and have fun playing!
