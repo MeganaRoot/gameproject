@@ -89,7 +89,7 @@ public class GameScreen extends JPanel implements ActionListener {
 	 * graphics object and draws/paints using that object
 	 * 
 	 */
-	@Override
+
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 
@@ -242,9 +242,7 @@ public class GameScreen extends JPanel implements ActionListener {
 			int tmp = l.getX() + l.getWidth();
 
 			if (tmp < dog.getX()) {
-				// System.out.println(i + ":" + l.getX() + ":"+ tmp+" : " + dog.getX());
 				score = score + 1;
-				// System.out.println("Score" + "" + score);
 
 			}
 			if (l.getX() >= 0) {
@@ -255,7 +253,6 @@ public class GameScreen extends JPanel implements ActionListener {
 			}
 
 		}
-		// System.out.println("Score" + "" + score);
 
 	}
 
@@ -289,11 +286,9 @@ public class GameScreen extends JPanel implements ActionListener {
 	 */
 	private class DogAdapter extends KeyAdapter {
 
-		@Override
 		public void keyReleased(KeyEvent e) {
 		}
 
-		@Override
 		public void keyPressed(KeyEvent e) {
 			if (e.getKeyCode() == KeyEvent.VK_SPACE && variableLoop) {
 				dog.setY(dog.getY() - 70);
