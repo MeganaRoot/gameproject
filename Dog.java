@@ -2,7 +2,6 @@
 
 import java.awt.Graphics;
 import java.awt.Rectangle;
-import java.awt.Toolkit;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 import java.awt.image.BufferedImage;
